@@ -24,26 +24,26 @@ if(isset($_SESSION['POST'])){
     <form action="" method="post" class="form-group">
 
             <div class="form-group">
-                <label for="f1">Product name</label>
+                <h5><label for="f1">Product name</label></h5>
                 <textarea class="form-control" type="text" name="name" rows="3" id="f4" value="<?=($old)? $_SESSION['POST']['name'] : ""?>" ></textarea>
             </div>
             <div class="form-group">
-                <label for="f2">Category</label>
+               <h5> <label for="f2">Category</label></h5>
                 <input type="text" name="category" placeholder="Category" id="f1" value="<?=($old)? $_SESSION['POST']['category'] : ""?>" class="form-control"">
             </div>
             <div class="form-group">
-                <label for="f3">Price</label>
+                <h5><label for="f3">Price</label></h5>
                 <input type="number" step=".01" name="price" placeholder="Price " id="f3"  value="<?=($old)? $_SESSION['POST']['price'] : ""?>" class="form-control" ">
             </div>
         
 
             <div class="form-group">
-                <label for="f4">Product description</label>
+               <h5> <label for="f4">Product description</label></h5>
                 <textarea class="form-control" type="text" name="about" rows="6" id="f4" value="<?=($old)? $_SESSION['POST']['about'] : ""?>" ></textarea>
             </div>
 
             
-            <button type="submit" name="save" class="btn btn-primary mt-3 mb-3">Save</button>
+            <button type="submit" name="save" class="btn btn-primary mt-3 mb-3">SAVE</button>
         
         </div>
         <div class="col-4 right"></div>

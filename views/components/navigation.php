@@ -16,25 +16,19 @@
 
  <a class="one" href=  <?=$_OUTER_PATH."/views/item/add.php"?>  >Add new product</a> 
  
-<a class="two" href= <?=$_OUTER_PATH."/views/item/index.php"?>  >Show products</a>
+<a class="two" href= <?=$_OUTER_PATH."/views/item/index.php"?>  >Show list products</a>
  </div>
-<div class="container">
+
 <div class="row-1">
 <div class="col col-lg-2"> </div>
 
 <div class="col-lg-auto justify-content-md-center"> 
+    <div class="container">
 <form class="d-flex search" method="get">
             <input class="form-control me-2" type="text" name="search" placeholder="Search by product name..." aria-label="Search">
             <button class="btn btn-outline-succes" type="submit">Search</button>
 </form>
 </div>
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-
-
-</style>
+</div>
 </head>
 <body>

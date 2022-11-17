@@ -2,10 +2,14 @@
  <head>
  <link rel="" href="<?= $_OUTER_PATH ."/images"?>">
 
+
  <link rel="stylesheet" href="<?= $_OUTER_PATH ."/css/style.css"?>">
 </head>
 
+<?php 
 
+include $_INNER_PATH ."/routes.php"; 
+?>
 
 
 <div class="row justify-content-md-center">
@@ -13,7 +17,6 @@
 
     </div>
     <div class="col-lg-auto">
-<!-- <a class="bi bi-droplet-half" href=<?=$_OUTER_PATH."/views/index.php"?>><img height= "30" width="30" src="./images/droplet.jpg"/></a> -->
     
 
 </div>
@@ -47,14 +50,53 @@
 
 <div class="col-3 AddShow">
     <div class="element-left ">
-<a class="one1" href= <?=$_OUTER_PATH."/views/item/index.php"?> >Show list items   &#x2192;</a>
+<a class="one1" href= <?=$_OUTER_PATH."/views/item/index.php"?> >Show list items  </a>
 </div>
 <div class="element-right ">
-<a class="two2" href=  <?=$_OUTER_PATH."/views/item/add.php"?> >Add new item &#x2192;</a>
+<a class="two2" href=  <?=$_OUTER_PATH."/views/item/add.php"?> >Add new item </a>
 </div>
 </div>
 
 </div>
 </div>
 
+<!-- Form cards -->
 
+
+    <div class="grid mb-5">
+
+     <?php foreach ($items as $item) {?>
+
+ <div class="card">
+
+<div class="img-container mb-3">
+</div>
+
+
+
+        <div class="card-info-container">
+        <a href="<?=$_OUTER_PATH . '/views/item/show.php?' . "id=$item->id" . '&show='?>"  class="main">  
+
+        <h2><?=$item->name?></h2>
+       <p> <?=$item->about?></p>
+      <h4> <?=$item->price?>€</h4>
+
+      </a>
+        <div class="edit-btns-container">
+            <form action="" method="post">
+                <input type="hidden" name="id" value=" <?=$item->id?>">  
+                <button id="edit-btn"type="submit" name="edit" class="btn btn-success">edit</button>
+            </form>
+            <form action="" method="post">
+                <input type="hidden" name="id" value=" <?=$item->id?>">
+                <button type="submit" name="destroy" class="btn btn-danger index">delete</button>
+            </form>
+        </div>
+    </div>
+ </div>
+            <?php }?>
+
+
+        </div>
+
+        </div>
